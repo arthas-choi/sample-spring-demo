@@ -1,5 +1,5 @@
 def SERVICE_GROUP = "sample"
-def SERVICE_NAME = "infs"
+def SERVICE_NAME = "ifsp"
 def IMAGE_NAME = "${SERVICE_GROUP}-${SERVICE_NAME}"
 def REPOSITORY_URL = "https://github.com/MuYoul/sample-spring-demo.git"
 def REPOSITORY_SECRET = ""
@@ -74,7 +74,7 @@ podTemplate(label: label, containers: [
         }
       }
     }
-    if (BRANCH_NAME == "master") {
+    if (BRANCH_NAME == "proto_test_branch") {
       stage("Build Image") {
         parallel(
           "Build Docker": {

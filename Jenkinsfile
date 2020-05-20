@@ -1,5 +1,5 @@
 def SERVICE_GROUP = "sample"
-def SERVICE_NAME = "ifsp"
+def SERVICE_NAME = "infs"
 def IMAGE_NAME = "${SERVICE_GROUP}-${SERVICE_NAME}"
 def REPOSITORY_URL = "https://github.com/MuYoul/sample-spring-demo.git"
 def REPOSITORY_SECRET = ""
