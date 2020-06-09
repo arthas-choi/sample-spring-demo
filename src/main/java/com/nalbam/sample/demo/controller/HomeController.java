@@ -28,7 +28,7 @@ public class HomeController {
         sdf.setTimeZone(TimeZone.getTimeZone("Asia/Seoul"));
 
         // host
-	host += "</p> my sample commit test </p> Infinity Stone ProtoType-2020-06-08-18:24-Test4444444444;
+	    host += "</p> my sample commit test </p> Infinity Stone ProtoType-2020-06-08-18:24-Test4444444444";
         model.put("host", host);
 
         // date
