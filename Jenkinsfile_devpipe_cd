@@ -22,9 +22,9 @@ pipeline {
 			stage('Deploy to Target') {
 					steps {
 					
-						sh	'sshpass -p "passw0rd" scp -o StrictHostKeyChecking=no -P 32781 -r ./"ROOT.jar" root@209.182.237.162:/app/ROOT.jar'
+						sh	'sshpass -p "passw0rd" scp -o StrictHostKeyChecking=no -P 2222 -r ./"ROOT.jar" root@13.209.85.207:/app/ROOT.jar'
 
-                        sh  'sshpass -p "passw0rd" ssh -o StrictHostKeyChecking=no -p 32781 root@209.182.237.162 "/app/start.sh > output.log"'
+                        sh  'sshpass -p "passw0rd" ssh -o StrictHostKeyChecking=no -p 2222 root@13.209.85.207 "/app/start.sh > output.log"'
 
 					}
 			}
