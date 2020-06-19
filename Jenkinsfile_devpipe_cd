@@ -6,9 +6,9 @@ pipeline {
         // This can be http or https
         NEXUS_PROTOCOL = "http"
         // Where your Nexus is running
-        NEXUS_URL = "209.182.237.162:32770"
+        NEXUS_URL = "http://3.34.182.27:8081/"
         // Repository where we will upload the artifact
-        NEXUS_REPOSITORY = "maven-releases"
+        NEXUS_REPOSITORY = "infinity-stone"
         // Jenkins credential id to authenticate to Nexus OSS
         NEXUS_CREDENTIAL_ID = "jenkins_nexus_id"
     }
@@ -16,7 +16,7 @@ pipeline {
    stages {
       stage('Download from Nexus') {
 				steps {
-					sh 'wget http://209.182.237.162:32770/repository/maven-releases/com/lemy0715/sample-spring-demo/1/sample-spring-demo-1.jar -O ROOT.jar'
+					sh 'wget http://3.34.182.27:8081/repository/infinity-stone/com/lemy0715/sample-spring-demo/1/sample-spring-demo-1.jar -O ROOT.jar'
 				}
 			}
 			stage('Deploy to Target') {
