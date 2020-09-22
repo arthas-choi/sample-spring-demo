@@ -12,7 +12,7 @@
 <main role="main">
     <section class="jumbotron text-center">
         <div class="container">
-            <h1><img src="https://cdn.nalbam.com/logo/spring-boot.png"></h1>
+            <h1><img src="https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg"></h1>
             <h3>${host}</h3>
             <p>${date}</p>
         </div>
