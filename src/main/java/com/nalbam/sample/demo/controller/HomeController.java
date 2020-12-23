@@ -34,7 +34,7 @@ public class HomeController {
 
     model.put("build_name", buildProperties.getName());
     model.put("build_version", buildProperties.getVersion());
-    model.put("build_time", buildProperties.getTime());
+    model.put("build_time", sdf.format(buildProperties.getTime()));
     model.put("build_name", buildProperties.getArtifact());
 
 
