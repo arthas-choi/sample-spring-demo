@@ -17,6 +17,12 @@
             <p>${date}</p>
         </div>
     </section>
+<ul>
+   <li>Build Name : ${build_name}</li>
+   <li>Build Version : ${build_version}</li>
+   <li>Build Time : ${build_time}</li>
+   <li>Build Name : ${build_name}</li>
+</ul>
 </main>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
