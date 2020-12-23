@@ -13,7 +13,9 @@ import java.util.TimeZone;
 
 @Controller
 public class HomeController {
-
+    @Autowired
+    BuildProperties buildProperties;
+	
     @GetMapping("/")
     public String index(Map<String, Object> model) {
         String host;
@@ -27,10 +29,17 @@ public class HomeController {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         sdf.setTimeZone(TimeZone.getTimeZone("Asia/Seoul"));
 
+	    // Artifact's name from the pom.xml file
+	    
+	modle.put("build_name", buildProperties.getName());
+	modle.put("build_version", buildProperties.getVersion());
+	modle.put("build_time", buildProperties.getTime());
+	modle.put("build_name", buildProperties.getArtifact());
+	 modle.put("build_name", buildProperties.getArtifact());
+    
         // host
-	    host += "<br>Infinity Stone 0.3 DEMO -Test-001</br>";
+	host += "<br>DevOps Application</br>";
         model.put("host", host);
-
         // date
         model.put("date", sdf.format(new Date()));
 
